@@ -10,11 +10,18 @@ namespace Snakes
     {
         static void Main(string[] args)
         {
-            HorizontalLine line1 = new HorizontalLine(3, 7, 5, 'o');
-            VerticalLine line2 = new VerticalLine(11, 18, 8, 'o');
-            line1.DrawHor();
-            line2.DrawVert();
-            Console.ReadLine(); 
+            Console.SetBufferSize(80, 25);
+
+            HorizontalLine upLine = new HorizontalLine(0, 78, 0, 'o');
+            HorizontalLine downLine = new HorizontalLine(0, 78, 24, 'o');
+            VerticalLine leftline = new VerticalLine(0, 24, 0, 'o');
+            VerticalLine rightline = new VerticalLine(0, 24, 78, 'o');
+            upLine.Draw();
+            downLine.Draw();
+            leftline.Draw();
+            rightline.Draw();
+
+            Console.ReadLine();
         }
        
     }
