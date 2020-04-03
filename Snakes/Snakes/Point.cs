@@ -46,7 +46,13 @@ namespace Snakes
             }
         }
 
-        public  void Draw()
+        public void Clear()
+        {
+            sym = ' ';
+            DrawPoint();
+        }
+
+        public  void DrawPoint()
         {
             Console.SetCursorPosition(x, y);
             Console.Write(sym);
