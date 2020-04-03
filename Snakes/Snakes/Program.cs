@@ -12,6 +12,7 @@ namespace Snakes
         {
             Console.SetBufferSize(80, 25);
 
+            //Отрисовка рамки
             HorizontalLine upLine = new HorizontalLine(0, 78, 0, 'o');
             HorizontalLine downLine = new HorizontalLine(0, 78, 24, 'o');
             VerticalLine leftline = new VerticalLine(0, 24, 0, 'o');
@@ -21,6 +22,10 @@ namespace Snakes
             leftline.Draw();
             rightline.Draw();
 
+
+            Point p = new Point(4, 6, '*');
+            Snake snake = new Snake(p, 4, Direction.RIGHT);
+            snake.Draw();
             Console.ReadLine();
         }
        
